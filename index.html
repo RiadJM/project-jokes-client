@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>JOKES</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,58 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>LOOKING FOR JOKES??</h1>
+
+      <p id="message"></p>
+      <p id="message-failure"></p>
+
+      <section>
+        <form id="sign-up-form">
+          <fieldset>
+            <legend>Sign up!</legend>
+            <label for="sign-up-email">Email</label>
+            <input id="sign-up-email" type="email" name="credentials[email]" placeholder="Email">
+
+            <label for="sign-up-password">Password</label>
+            <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password">
+
+            <label for="sign-up-password_confirmation">Password Confirmation</label>
+            <input id="sign-up-password_confirmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+
+            <input type="submit" value="Sign up!">
+          </fieldset>
+        </form>
+      </section>
+
+      <section>
+        <form id="sign-in-form">
+          <fieldset>
+            <legend>Sign In!</legend>
+            <label for="sign-in-email">Email</label>
+            <input id="sign-in-email" type="email" name="credentials[email]" placeholder="Email">
+            <label for="sign-in-password">Password</label>
+            <input id="sign-in-password" type="password" name="credentials[password]" placeholder="Password">
+            <input type="submit" value="Sign In!">
+          </fieldset>
+        </form>
+      </section>
+
+      <div id="authBundle">
+      <section>
+        <form id="change-password">
+          <fieldset>
+            <legend>Change Password!</legend>
+            <input type="password" name="passwords[old]" placeholder="Old Password">
+            <input type="password" name="passwords[new]" placeholder="New Password">
+            <input type="submit" value="Change Password!">
+          </fieldset>
+        </form>
+      </section>
+
+      <div id="button">
+          <button id="sign-out" type="button">Sign Out</button>
+      </div>
+    </div>
+
     </body>
 </html>
