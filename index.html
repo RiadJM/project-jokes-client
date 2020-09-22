@@ -15,20 +15,21 @@
       <h1>LOOKING FOR JOKES??</h1>
 
       <p id="message"></p>
-      <p id="message-failure"></p>
 
-      <section>
-        <form id="sign-up-form">
+
+      <div class="entry">
+      <section >
+        <form id="sign-up-form" class="sign-up-form">
           <fieldset>
             <legend>Sign up!</legend>
-            <label for="sign-up-email">Email</label>
-            <input id="sign-up-email" type="email" name="credentials[email]" placeholder="Email">
+            <label for="sign-up-email">Email</label><br>
+            <input id="sign-up-email" type="email" name="credentials[email]" placeholder="Email"><br>
 
-            <label for="sign-up-password">Password</label>
-            <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password">
+            <label for="sign-up-password">Password</label><br>
+            <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password"><br>
 
-            <label for="sign-up-password_confirmation">Password Confirmation</label>
-            <input id="sign-up-password_confirmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            <label for="sign-up-password_confirmation">Password Confirmation</label><br>
+            <input id="sign-up-password_confirmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password"><br>
 
             <input type="submit" value="Sign up!">
           </fieldset>
@@ -36,26 +37,28 @@
       </section>
 
       <section>
-        <form id="sign-in-form">
+        <form id="sign-in-form" class="sign-in-form">
           <fieldset>
             <legend>Sign In!</legend>
-            <label for="sign-in-email">Email</label>
-            <input id="sign-in-email" type="email" name="credentials[email]" placeholder="Email">
-            <label for="sign-in-password">Password</label>
-            <input id="sign-in-password" type="password" name="credentials[password]" placeholder="Password">
+            <label for="sign-in-email">Email</label><br>
+            <input id="sign-in-email" type="email" name="credentials[email]" placeholder="Email"><br>
+            <label for="sign-in-password">Password</label><br>
+            <input id="sign-in-password" type="password" name="credentials[password]" placeholder="Password"><br>
             <input type="submit" value="Sign In!">
           </fieldset>
         </form>
       </section>
+    </div>
 
       <div id="authBundle">
-      <section>
+        <div class="auth">
+      <section class="pwd">
         <form id="change-password">
           <fieldset>
             <legend>Change Password!</legend>
-            <input type="password" name="passwords[old]" placeholder="Old Password">
-            <input type="password" name="passwords[new]" placeholder="New Password">
-            <input type="submit" value="Change Password!">
+            <input type="password" name="passwords[old]" placeholder="Old Password"><br>
+            <input type="password" name="passwords[new]" placeholder="New Password"><br>
+            <input type="submit" value="Change Password!"><br>
           </fieldset>
         </form>
       </section>
@@ -63,6 +66,32 @@
       <div id="button">
           <button id="sign-out" type="button">Sign Out</button>
       </div>
+    </div>
+
+      <section>
+        <div class="create">
+        <form id="create-joke">
+          <fieldset>
+            <legend>Create Joke!</legend>
+            <label for="joke-title">Title</label>
+            <input id="joke-title" type="text" name="title" placeholder="Title">
+            <textarea id="joke-text" name="text" placeholder="Type Joke Here"></textarea>
+            <input type="submit" value="Submit Joke!">
+          </fieldset>
+        </form>
+      </section>
+    </div>
+
+      <div id="show-button">
+          <button id="show" type="button">Show Jokes</button>
+      </div>
+
+      <div id="show-jokes-here"></div>
+
+
+
+
+
     </div>
 
     </body>

@@ -9,7 +9,7 @@ const onSignUpSuccess = function (response) {
 }
 
 const onSignUpFailure = function () {
-  $('#message-failure').text('Sign up failed. Self-Destruct sequence activated.')
+  $('#message').text('Sign up failed. Self-Destruct sequence activated.')
   $('#sign-up-form').trigger('reset')
 }
 
@@ -18,12 +18,12 @@ const onSignInSuccess = function (response) {
   store.user = response.user
   $('#message').text('Thanks for signing in ' + response.user.email)
   $('#sign-in-form').trigger('reset')
-  $('#sign-in-form').hide()
+  $('.entry').hide()
   $('#authBundle').show()
 }
 
 const onSignInFailure = function () {
-  $('#message-failure').text('Sign in failed. Self-Destruct sequence activated.')
+  $('#message').text('Sign in failed. Self-Destruct sequence activated.')
   $('#sign-in-form').trigger('reset')
 }
 
@@ -34,7 +34,7 @@ const onChangePasswordSuccess = function () {
 }
 
 const onChangePasswordFailure = function () {
-  $('#message-failure').text('Change Password failed. Self-Destruct sequence activated.')
+  $('#message').text('Change Password failed. Self-Destruct sequence activated.')
   $('#change-password').trigger('reset')
 }
 
@@ -43,12 +43,11 @@ const onSignOutSuccess = function () {
   store.user = null
   $('#message').text('See you next time!')
   $('#authBundle').hide()
-  $('#sign-up-form').show()
-  $('#sign-in-form').show()
+  $('.entry').show()
 }
 
 const onSignOutFailure = function () {
-  $('#message-failure').text('Sign out Failed. Self-Destruct sequence activated.')
+  $('#message').text('Sign out Failed. Self-Destruct sequence activated.')
 }
 
 module.exports = {
