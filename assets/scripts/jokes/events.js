@@ -2,16 +2,23 @@
 const getFormFields = require('./../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
-// const store = require('../store')
+const store = require('../store')
 
-const onCreateJoke = function (event) {
+const onInputJoke = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
   console.log(data)
-  api.createJoke(data)
-    .then(ui.onCreateJokeSuccess)
-    .catch(ui.onFailure)
+  if (store.jokeId) {
+    api.editJoke(data)
+      .then(ui.onEditJokeSuccess)
+      .then(onShowJokes)
+      .catch(ui.onFailure)
+  } else {
+    api.createJoke(data)
+      .then(ui.onCreateJokeSuccess)
+      .catch(ui.onFailure)
+  }
 }
 
 const onShowJokes = function (event) {
@@ -29,8 +36,19 @@ const onDeleteJoke = function (event) {
     .catch(ui.onFailure)
 }
 
+const onEditJoke = function (event) {
+  event.preventDefault()
+  console.log(event.target.id, event.target)
+  store.jokeId = event.target.id
+  $('#joke-text').val(store.content[event.target.id])
+  $('.edit').show()
+  $('.createbutton').hide()
+}
+
 module.exports = {
-  onCreateJoke,
+  onInputJoke,
   onShowJokes,
-  onDeleteJoke
+  onDeleteJoke,
+  onEditJoke
+  // onEditSubmit
 }

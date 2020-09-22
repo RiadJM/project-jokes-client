@@ -15,17 +15,6 @@ const createJoke = function (data) {
   })
 }
 
-const updateJoke = function (data) {
-  return $.ajax({
-    url: config.apiUrl + '/jokes',
-    method: 'PATCH',
-    headers: { Authorization: 'Bearer ' + store.user.token },
-    data: {
-      joke: data
-    }
-  })
-}
-
 const showJokes = function () {
   return $.ajax({
     url: config.apiUrl + '/jokes',
@@ -42,9 +31,20 @@ const deleteJoke = function (jokeId) {
   })
 }
 
+const editJoke = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/jokes/' + store.jokeId,
+    method: 'PATCH',
+    headers: { Authorization: 'Bearer ' + store.user.token },
+    data: {
+      joke: data
+    }
+  })
+}
+
 module.exports = {
   createJoke,
-  updateJoke,
+  editJoke,
   showJokes,
   deleteJoke
 }

@@ -11,6 +11,7 @@ const jokeEvents = require('./jokes/events')
 // $('#sign-out').hide()
 // $('#change-password').hide()
 $('#authBundle').hide()
+$('.edit').hide()
 
 $(() => {
   $('#sign-up-form').on('submit', userEvents.onSignUp)
@@ -18,7 +19,8 @@ $(() => {
   $('#change-password').on('submit', userEvents.onChangePassword)
   $('#sign-out').on('click', userEvents.onSignOut)
 
-  $('#create-joke').on('submit', jokeEvents.onCreateJoke)
   $('#show').on('click', jokeEvents.onShowJokes)
   $('#show-jokes-here').on('click', '.deleteButton', jokeEvents.onDeleteJoke)
+  $('#show-jokes-here').on('click', '.editButton', jokeEvents.onEditJoke)
+  $('#create-joke').on('submit', jokeEvents.onInputJoke)
 })
