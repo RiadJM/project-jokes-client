@@ -10,7 +10,6 @@ const onFailure = function (response) {
 }
 
 const onShowJokesSuccess = function (response) {
-  console.log('Response is', response)
   const jokeData = response.jokes
   let showData = ''
   const content = {}

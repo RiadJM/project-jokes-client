@@ -8,7 +8,6 @@ const onInputJoke = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
   if (store.jokeId) {
     api.editJoke(data)
       .then(ui.onEditJokeSuccess)
@@ -38,7 +37,6 @@ const onDeleteJoke = function (event) {
 
 const onEditJoke = function (event) {
   event.preventDefault()
-  console.log(event.target.id, event.target)
   store.jokeId = event.target.id
   $('#joke-text').val(store.content[event.target.id])
   $('.edit').show()
@@ -50,5 +48,4 @@ module.exports = {
   onShowJokes,
   onDeleteJoke,
   onEditJoke
-  // onEditSubmit
 }
