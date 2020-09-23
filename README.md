@@ -2,7 +2,7 @@ API repository corresponding to this client: https://github.com/RiadJM/Jokes
 
 Deployed Jokes API on heroku: https://fathomless-castle-77616.herokuapp.com
 
-Deployed Jokes Client:
+Deployed Jokes Client: https://riadjm.github.io/project-jokes-client/
 
 Technologies Used: HTML5, javascript, css, bootstrap, jquery, ajax.
 
