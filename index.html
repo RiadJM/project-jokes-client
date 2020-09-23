@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>JOKES</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>LOOKING FOR JOKES??</h1>
+
+      <p id="message"></p>
+
+
+      <div class="entry">
+      <section >
+        <form id="sign-up-form" class="sign-up-form">
+          <fieldset>
+            <legend>Sign up!</legend>
+            <label for="sign-up-email">Email</label><br>
+            <input id="sign-up-email" type="email" name="credentials[email]" placeholder="Email"><br>
+
+            <label for="sign-up-password">Password</label><br>
+            <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password"><br>
+
+            <label for="sign-up-password_confirmation">Password Confirmation</label><br>
+            <input id="sign-up-password_confirmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password"><br>
+
+            <input type="submit" value="Sign up!">
+          </fieldset>
+        </form>
+      </section>
+
+      <section>
+        <form id="sign-in-form" class="sign-in-form">
+          <fieldset>
+            <legend>Sign In!</legend>
+            <label for="sign-in-email">Email</label><br>
+            <input id="sign-in-email" type="email" name="credentials[email]" placeholder="Email"><br>
+            <label for="sign-in-password">Password</label><br>
+            <input id="sign-in-password" type="password" name="credentials[password]" placeholder="Password"><br>
+            <input type="submit" value="Sign In!">
+          </fieldset>
+        </form>
+      </section>
+    </div>
+
+      <div id="authBundle">
+        <div class="auth">
+      <section class="pwd">
+        <form id="change-password">
+          <fieldset>
+            <legend>Change Password!</legend>
+            <input type="password" name="passwords[old]" placeholder="Old Password"><br>
+            <input type="password" name="passwords[new]" placeholder="New Password"><br>
+            <input type="submit" value="Change Password!"><br>
+          </fieldset>
+        </form>
+      </section>
+
+      <div id="button">
+          <button id="sign-out" type="button">Sign Out</button>
+      </div>
+    </div>
+
+      <section class="create">
+        <form id="create-joke">
+          <fieldset>
+            <legend>Create Joke!</legend>
+            <label for="joke-title">Title</label>
+            <input id="joke-title" type="text" name="title" placeholder="Title">
+            <textarea class="textarea" id="joke-text" name="text" placeholder="Type Joke Here"></textarea>
+            <input class="createbutton" type="submit" value="submit-joke">
+            <input class="edit" type="submit" value="submit-edited-joke">
+          </fieldset>
+        </form>
+      </section>
+
+      <div id="show-button">
+          <button id="show" type="button">Show Jokes</button>
+      </div>
+
+      <div id="show-jokes-here"></div>
+    </div>
+  </body>
+</html>
